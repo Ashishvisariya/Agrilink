@@ -41,7 +41,7 @@ export const Navbar: React.FC = () => {
   });
 
   return (
-    <header className="bg-white border-b border-slate-200 sticky top-[37px] z-40 shadow-xs">
+    <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
@@ -147,13 +147,13 @@ export const Navbar: React.FC = () => {
               </div>
               <div className="hidden md:block text-left leading-tight">
                 <div className="text-xs font-bold text-slate-900 flex items-center gap-1">
-                  {currentUser.name}
+                  {currentRole === 'fpo' ? 'FPO' : currentRole.charAt(0).toUpperCase() + currentRole.slice(1)} Workspace
                   {currentUser.verified && (
                     <CheckCircle2 className="w-3 h-3 text-emerald-600 fill-emerald-100" />
                   )}
                 </div>
                 <span className="text-[10px] text-emerald-800 font-semibold uppercase tracking-wider">
-                  {currentUser.role} • {currentUser.organizationName || currentUser.location}
+                  {currentUser.location}
                 </span>
               </div>
             </div>

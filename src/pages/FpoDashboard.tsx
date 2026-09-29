@@ -12,7 +12,7 @@ export const FpoDashboard: React.FC = () => {
   } = useApp();
 
   const [selectedLots, setSelectedLots] = useState<string[]>(['AGL-WHT-2026-00125']);
-  const [fpoLotTitle, setFpoLotTitle] = useState('Malwa FPO Institutional Wheat Pool');
+  const [fpoLotTitle, setFpoLotTitle] = useState('Aggregated Wheat Lot');
   const [targetPrice, setTargetPrice] = useState(2480);
   const [aggregated, setAggregated] = useState(false);
 
@@ -43,7 +43,7 @@ export const FpoDashboard: React.FC = () => {
               <span>Farmer Producer Organization (FPO) Portal</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black mt-1">
-              {currentUser.organizationName || 'Malwa Farmers Producer Org'}
+              {currentUser.organizationName || 'Farmer Producer Organization'}
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 mt-1">
               Aggregate smallholder produce, negotiate institutional volumes, and command premium pricing.

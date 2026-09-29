@@ -82,7 +82,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [currentLang, setCurrentLang] = useState<Language>('en');
   const [activeTab, setActiveTab] = useState<PageTab>('landing');
 
-  // State collections initialized with demo seed data
+  // State collections initialized with example marketplace data
   const [marketPrices] = useState<MarketPrice[]>(INITIAL_MARKET_PRICES);
   const [cropLots, setCropLots] = useState<CropLot[]>(INITIAL_CROP_LOTS);
   const [buyerDemands, setBuyerDemands] = useState<BuyerDemand[]>(INITIAL_BUYER_DEMANDS);
@@ -378,7 +378,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const newFpoLot: CropLot = {
       id: fpoLotId,
       farmerId: currentUser.id,
-      farmerName: currentUser.organizationName || 'Malwa FPO Aggregator',
+      farmerName: currentUser.organizationName || 'Farmer Producer Organization',
       fpoId: currentUser.id,
       fpoName: currentUser.organizationName,
       crop: selectedLots[0]?.crop || 'Wheat',

@@ -19,9 +19,9 @@ export const AdminDashboard: React.FC = () => {
   const [activeGrievanceId, setActiveGrievanceId] = useState<string | null>(null);
 
   const pendingBuyers = [
-    { id: 'usr-buyer-02', company: 'Northern Grains Corp', location: 'Karnal, Haryana', docs: 'GST, FSSAI, PAN', status: 'Pending Verification' },
-    { id: 'usr-buyer-03', company: 'Apex Feed Mills Ltd', location: 'Hoshiarpur, Punjab', docs: 'GST, Trade License', status: 'Pending Verification' },
-    { id: 'usr-buyer-04', company: 'Golden Harvest Exporters', location: 'Amritsar, Punjab', docs: 'IEC, GST, APMC License', status: 'Pending Verification' },
+    { id: 'usr-buyer-02', company: 'Grain Exporter', location: 'Karnal, Haryana', docs: 'GST, FSSAI, PAN', status: 'Pending Verification' },
+    { id: 'usr-buyer-03', company: 'Animal Feed Manufacturer', location: 'Hoshiarpur, Punjab', docs: 'GST, Trade License', status: 'Pending Verification' },
+    { id: 'usr-buyer-04', company: 'Agricultural Exporter', location: 'Amritsar, Punjab', docs: 'IEC, GST, APMC License', status: 'Pending Verification' },
   ];
 
   const chartData = [

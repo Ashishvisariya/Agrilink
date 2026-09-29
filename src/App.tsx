@@ -58,7 +58,6 @@ export const App: React.FC = () => {
             <div>
               <div className="font-extrabold text-sm text-white flex items-center justify-center sm:justify-start gap-1">
                 <span>Agri<span className="text-emerald-500">Link</span></span>
-                <span className="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800 px-1.5 py-0.2 rounded font-bold uppercase">SIH 2026</span>
               </div>
               <p className="text-[11px] text-slate-500 mt-1">Full-Stack Agri Market Intelligence & Farmer-Buyer Linkage Platform</p>
             </div>

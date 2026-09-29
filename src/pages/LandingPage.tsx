@@ -105,45 +105,6 @@ export const LandingPage: React.FC = () => {
             </button>
           </div>
 
-          {/* Quick Role Launch Bar inside Hero */}
-          <div className="pt-8 border-t border-slate-800/80 mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
-            <div
-              onClick={() => { switchRole('farmer'); setActiveTab('farmer_dashboard'); }}
-              className="p-3 bg-slate-800/50 hover:bg-emerald-900/40 border border-slate-700/60 rounded-xl cursor-pointer transition-all"
-            >
-              <div className="text-xs text-emerald-400 font-bold">Farmer Portal →</div>
-              <div className="text-sm font-bold text-white mt-0.5">Ramesh Singh</div>
-              <div className="text-[11px] text-slate-400">View Wheat Prices & Offers</div>
-            </div>
-
-            <div
-              onClick={() => { switchRole('buyer'); setActiveTab('buyer_demand'); }}
-              className="p-3 bg-slate-800/50 hover:bg-emerald-900/40 border border-slate-700/60 rounded-xl cursor-pointer transition-all"
-            >
-              <div className="text-xs text-emerald-400 font-bold">Buyer Portal →</div>
-              <div className="text-sm font-bold text-white mt-0.5">Punjab Agro Foods</div>
-              <div className="text-[11px] text-slate-400">Post Demands & Bid</div>
-            </div>
-
-            <div
-              onClick={() => { switchRole('fpo'); setActiveTab('fpo_dashboard'); }}
-              className="p-3 bg-slate-800/50 hover:bg-emerald-900/40 border border-slate-700/60 rounded-xl cursor-pointer transition-all"
-            >
-              <div className="text-xs text-emerald-400 font-bold">FPO Aggregator →</div>
-              <div className="text-sm font-bold text-white mt-0.5">Malwa FPO</div>
-              <div className="text-[11px] text-slate-400">Aggregate 46 Farmer Lots</div>
-            </div>
-
-            <div
-              onClick={() => { switchRole('admin'); setActiveTab('admin'); }}
-              className="p-3 bg-slate-800/50 hover:bg-emerald-900/40 border border-slate-700/60 rounded-xl cursor-pointer transition-all"
-            >
-              <div className="text-xs text-emerald-400 font-bold">Admin Desk →</div>
-              <div className="text-sm font-bold text-white mt-0.5">Verification & Disputes</div>
-              <div className="text-[11px] text-slate-400">Approve Buyers & Resolve</div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -256,8 +217,8 @@ export const LandingPage: React.FC = () => {
       {/* CTA Footer Banner */}
       <section className="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="space-y-2 text-center md:text-left">
-          <h3 className="text-2xl sm:text-3xl font-black">Ready to test the AgriLink Ecosystem?</h3>
-          <p className="text-emerald-100 text-sm">Experience the end-to-end demo flow as a Farmer, Buyer, FPO, or Admin.</p>
+          <h3 className="text-2xl sm:text-3xl font-black">Make your next crop transaction with confidence.</h3>
+          <p className="text-emerald-100 text-sm">Explore market insights and connect with verified buyers.</p>
         </div>
         <button
           onClick={() => {
@@ -266,7 +227,7 @@ export const LandingPage: React.FC = () => {
           }}
           className="bg-white text-emerald-900 font-extrabold px-8 py-4 rounded-xl hover:bg-emerald-50 transition-colors shadow-md text-base whitespace-nowrap"
         >
-          Launch Farmer Dashboard →
+          Open Farmer Dashboard →
         </button>
       </section>
 
