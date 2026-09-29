@@ -3,7 +3,7 @@ import { useApp, PageTab } from '../context/AppContext';
 import {
   Sprout, TrendingUp, ShoppingBag, PlusCircle, Award,
   Truck, Warehouse, CreditCard, AlertCircle, Layers,
-  Bell, Menu, X, CheckCircle2, ChevronRight, MapPin, Shield
+  Bell, Menu, X, CheckCircle2, ChevronRight, MapPin, Shield, LogIn, ArrowLeft
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -39,6 +39,31 @@ export const Navbar: React.FC = () => {
     if (!item.roles) return true;
     return item.roles.includes(currentRole);
   });
+
+  if (activeTab === 'farmer_login') {
+    return (
+      <header className="bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <button
+            onClick={() => setActiveTab('landing')}
+            className="flex items-center gap-2.5 text-left"
+          >
+            <span className="w-9 h-9 rounded-lg bg-emerald-700 flex items-center justify-center text-white">
+              <Sprout className="w-5 h-5" />
+            </span>
+            <span className="font-extrabold text-lg text-agri-dark">Agri<span className="text-emerald-600">Link</span></span>
+          </button>
+          <button
+            onClick={() => setActiveTab('landing')}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-emerald-700"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to home
+          </button>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
@@ -85,6 +110,14 @@ export const Navbar: React.FC = () => {
 
           {/* User Profile & Right Actions */}
           <div className="flex items-center gap-3">
+
+            <button
+              onClick={() => setActiveTab('farmer_login')}
+              className="hidden sm:inline-flex items-center gap-2 rounded-md border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors"
+            >
+              <LogIn className="w-4 h-4" />
+              Farmer Login
+            </button>
 
             {/* Notification Drawer Trigger */}
             <div className="relative">

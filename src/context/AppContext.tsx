@@ -15,6 +15,7 @@ import { Language, i18nTranslations } from '../services/i18n';
 
 export type PageTab = 
   | 'landing'
+  | 'farmer_login'
   | 'farmer_dashboard'
   | 'create_lot'
   | 'buyer_matching'

@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import {
   TrendingUp, ShieldCheck, ArrowRight, CheckCircle2,
   Users, ShoppingBag, Truck, Award, Sparkles, Scale,
-  BarChart3, Layers, Lock, ChevronRight, Sprout
+  BarChart3, Layers, Lock, ChevronRight, Sprout, LogIn
 } from 'lucide-react';
 
 export const LandingPage: React.FC = () => {
@@ -96,12 +96,12 @@ export const LandingPage: React.FC = () => {
 
             <button
               onClick={() => {
-                switchRole('farmer');
-                setActiveTab('buyer_demand');
+                setActiveTab('farmer_login');
               }}
-              className="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 text-base"
+              className="w-full sm:w-auto bg-white hover:bg-emerald-50 text-emerald-900 border border-emerald-100 font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 text-base"
             >
-              <span>Find Verified Buyers</span>
+              <LogIn className="w-5 h-5" />
+              <span>Farmer Login</span>
             </button>
           </div>
 

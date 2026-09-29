@@ -3,6 +3,7 @@ import { AppProvider, useApp } from './context/AppContext';
 import { DemoBar } from './components/DemoBar';
 import { Navbar } from './components/Navbar';
 import { LandingPage } from './pages/LandingPage';
+import { FarmerLoginPage } from './pages/FarmerLoginPage';
 import { FarmerDashboard } from './pages/FarmerDashboard';
 import { CreateLotPage } from './pages/CreateLotPage';
 import { BuyerMatchingPage } from './pages/BuyerMatchingPage';
@@ -22,8 +23,9 @@ const MainContent: React.FC = () => {
   const { activeTab } = useApp();
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main className={activeTab === 'farmer_login' ? 'w-full' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'}>
       {activeTab === 'landing' && <LandingPage />}
+      {activeTab === 'farmer_login' && <FarmerLoginPage />}
       {activeTab === 'farmer_dashboard' && <FarmerDashboard />}
       {activeTab === 'create_lot' && <CreateLotPage />}
       {activeTab === 'buyer_matching' && <BuyerMatchingPage />}

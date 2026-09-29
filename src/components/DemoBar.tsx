@@ -4,7 +4,7 @@ import { UserRole } from '../types';
 import { Globe } from 'lucide-react';
 
 export const DemoBar: React.FC = () => {
-  const { currentRole, switchRole, currentLang, setLanguage } = useApp();
+  const { currentRole, activeTab, switchRole, currentLang, setLanguage } = useApp();
 
   const roles: { role: UserRole; label: string }[] = [
     { role: 'farmer', label: 'Farmer' },
@@ -12,6 +12,8 @@ export const DemoBar: React.FC = () => {
     { role: 'fpo', label: 'FPO' },
     { role: 'admin', label: 'Admin' },
   ];
+
+  if (activeTab === 'farmer_login') return null;
 
   return (
     <div className="bg-white border-b border-slate-200 px-4 py-2 text-xs">
